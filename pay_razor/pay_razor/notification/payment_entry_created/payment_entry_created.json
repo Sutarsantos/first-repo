@@ -1,0 +1,29 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2025-02-04 12:53:51.781280",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Payment Entry",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "New fee {{doc.name}} created against you",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2025-02-04 12:55:01.319895",
+ "modified_by": "Administrator",
+ "module": "Pay Razor",
+ "name": "Payment entry Created",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "contact_email"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "We have created payemnt entry {doc.name}} for you"
+}

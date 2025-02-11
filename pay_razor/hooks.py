@@ -140,13 +140,26 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+     "Fee Category": {
+        "after_insert": "techademy_erpnext.custom_accounting.tally_integration.send_fee_category_to_tally"
+    },
+    "Fees": {
+        "after_insert": "techademy_erpnext.custom_accounting.tally_integration.send_fees_to_tally"
+    },
+     "Student":{
+        "after_insert": "techademy_erpnext.custom_accounting.tally_integration.send_students_to_tally"
+    },
+     "Payment Entry":{
+        "on_submit": "techademy_erpnext.custom_accounting.tally_integration.send_receipt_to_tally" 
+    },
+}
+
 
 # Scheduled Tasks
 # ---------------
