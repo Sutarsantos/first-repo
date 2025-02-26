@@ -164,7 +164,13 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+    "cron":{
+        "* * * * *":[
+            "pay_razor.pay_razor.tasks.cron"
+        ]
+    },
+
 # 	"all": [
 # 		"pay_razor.tasks.all"
 # 	],
@@ -180,7 +186,7 @@ doc_events = {
 # 	"monthly": [
 # 		"pay_razor.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
